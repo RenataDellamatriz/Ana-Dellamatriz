@@ -10,6 +10,10 @@
   padding: 10px 40px;
 }
 
+.header .menu-logo-bar .menu-icon{
+  transition:0.2s ease-in-out;
+}
+
 .header .logo {
   width: 350px;
   padding-top: 20px;
@@ -34,21 +38,13 @@
   color: white;
   white-space: nowrap;
   padding-left: 10px;
+  cursor: pointer;
 }
 
-.agende-seu-horario{
-  font-family: "Work Sans", sans-serif;
-  color: white;
-  background-color: #866A70 ;
-  font-size: 10px;
-  border-radius: 20px;
-  padding:3px 12px;
-  
+.header .ancors .items:hover{
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.536);
 }
 
-.agende-seu-horario:hover{
-  background-color: #a97683;
-}
 
 @media screen and (max-width: 1000px) {
   .header .ancors {

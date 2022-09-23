@@ -5,23 +5,26 @@ import "./Modal-header.css";
 const ModalHeader = (props: { open: boolean; onClose: () => void }) => {
   return (
     <div>
-      <Modal open={props.open} onClose={props.onClose}>
-        <Box>          
-            <ul className="ancors-modal">
+      <Modal open={props.open}  onClose={props.onClose}>
+        <Box >          
+            <ul 
+            className="ancors-modal"
+            
+            >
             <button 
             onClick={props.onClose}
             className='close'>x</button>
               <li>
-                <a>Sobre mim</a>
+                <a className='items'>Sobre mim</a>
               </li>
               <li>
-                <a>Serviços</a>
+                <a className='items'>Serviços</a>
               </li>
               <li>
-                <a>Localização</a>
+                <a className='items'>Localização</a>
               </li>
               <li>
-                <a>Agende seu horário</a>
+                <a className='items'>Agende seu horário</a>
               </li>
             </ul>
           
