@@ -51,7 +51,7 @@ const Header = () => {
               fontFamily: "Work Sans",
               color: "white",
               backgroundColor: "#866A70",
-              fontSize: "10px",
+              fontSize: "15px",
               borderRadius: "20px",
               padding: "3px 12px",
               transition: '2s, ease-in-out',

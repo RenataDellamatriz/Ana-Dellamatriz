@@ -4,8 +4,22 @@ import background from "../../images/background.png";
 import Header from "../../components/Header";
 import SaibaMais from "../../components/Saiba-mais";
 import SwiperContent from "../../components/Swiper";
+import React, { useRef, ReactHTMLElement } from "react";
 
 const Home = () => {
+  const especialidades = useRef<HTMLDivElement>(null);
+
+  const scrollToEspecialidades = (
+    elementref: React.RefObject<HTMLDivElement>
+  ) => {
+    if (elementref?.current) {
+      window.scrollTo({
+        top: elementref.current.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <>
       <Box
@@ -18,7 +32,7 @@ const Home = () => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center center",
           minHeight: "500px",
-          position: "relative"
+          position: "relative",
         }}
       >
         <Header />
@@ -26,7 +40,7 @@ const Home = () => {
           <h1 className="main-text">
             Conhecimento e segurança para o tratamento da sua pele
           </h1>
-          <SaibaMais />
+          <SaibaMais onClick={() => scrollToEspecialidades(especialidades)} />
         </div>
         <svg
           className="wave1"
@@ -40,11 +54,10 @@ const Home = () => {
           ></path>
         </svg>
       </Box>
-      <Box className="especialidades">
+      <Box className="especialidades" ref={especialidades}>
         <h2>Especialidades</h2>
-        
+        <SwiperContent />
       </Box>
-
     </>
   );
 };
