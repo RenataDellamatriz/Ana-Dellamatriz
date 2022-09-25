@@ -4,7 +4,7 @@ import background from "../../images/background.png";
 import Header from "../../components/Header";
 import SaibaMais from "../../components/Saiba-mais";
 import SwiperContent from "../../components/Swiper";
-import React, { useRef, ReactHTMLElement } from "react";
+import React, { useRef } from "react";
 
 const Home = () => {
   const especialidades = useRef<HTMLDivElement>(null);
