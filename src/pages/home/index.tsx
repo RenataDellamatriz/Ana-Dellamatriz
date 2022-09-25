@@ -5,11 +5,13 @@ import Header from "../../components/Header";
 import SaibaMais from "../../components/Saiba-mais";
 import SwiperContent from "../../components/Swiper";
 import React, { useRef } from "react";
+import AnaDellamatrizFoto from "../../images/anadellamatriz.png";
 
 const Home = () => {
   const especialidades = useRef<HTMLDivElement>(null);
+  const sobreMim = useRef<HTMLDivElement>(null);
 
-  const scrollToEspecialidades = (
+  const scrollTo = (
     elementref: React.RefObject<HTMLDivElement>
   ) => {
     if (elementref?.current) {
@@ -35,12 +37,12 @@ const Home = () => {
           position: "relative",
         }}
       >
-        <Header />
+        <Header sobreMimScroll={() => scrollTo(sobreMim)} />
         <div className="main-content">
           <h1 className="main-text">
             Conhecimento e segurança para o tratamento da sua pele
           </h1>
-          <SaibaMais onClick={() => scrollToEspecialidades(especialidades)} />
+          <SaibaMais onClick={() => scrollTo(especialidades)} />
         </div>
         <svg
           className="wave1"
@@ -57,6 +59,25 @@ const Home = () => {
       <Box className="especialidades" ref={especialidades}>
         <h2>Especialidades</h2>
         <SwiperContent />
+      </Box> 
+      <Box className="sobre" ref={sobreMim}>
+        <div className='sobre-wrapper'>
+          <div className="sobre-texto">
+            <h3>Sobre</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div>
+            <img className="AnaDellamatrizFoto" src={AnaDellamatrizFoto} />
+          </div>
+        </div>
       </Box>
     </>
   );

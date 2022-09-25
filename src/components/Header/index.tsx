@@ -7,7 +7,7 @@ import { useState } from "react";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import { Button } from "@mui/material";
 
-const Header = () => {
+const Header = ({sobreMimScroll}:{sobreMimScroll:() => void}) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -36,7 +36,7 @@ const Header = () => {
       </div>
       <ul className="ancors">
         <li>
-          <a className='items'>Sobre mim</a>
+          <a className='items' onClick={sobreMimScroll}>Sobre mim</a>
         </li>
         <li>
           <a className='items'>Serviços</a>
