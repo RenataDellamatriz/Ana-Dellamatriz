@@ -22,7 +22,7 @@ const Header = ({sobreMimScroll}:{sobreMimScroll:() => void}) => {
           className="menu-icon"
           sx={{
             color: "white",
-            width: "35px",
+            width: "18%",
             height: "35px",
             padding:'5px',
             display: { xs: "block", md: "none" },

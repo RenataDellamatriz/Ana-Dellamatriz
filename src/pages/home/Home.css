@@ -24,12 +24,16 @@
   bottom: 0;
   z-index: 1;
 }
+
 .especialidades {
-  background: rgb(226,206,206);
-  background: linear-gradient(180deg, rgba(226,206,206,1) 0%, rgba(208,192,192,1) 100%);
+  background: rgb(226, 206, 206);
+  background: linear-gradient(
+    180deg,
+    rgba(226, 206, 206, 1) 0%,
+    rgba(208, 192, 192, 1) 100%
+  );
   width: 100vw;
   height: auto;
-  padding-bottom: 10%;
   position: relative;
   text-shadow: 1px 3px 5px #c1a2a2;
 }
@@ -39,15 +43,13 @@
   font-family: "Playfair Display", serif;
   font-size: 3rem;
   text-align: center;
-  padding: 40px;
 }
 
 .sobre {
   width: 100vw;
   height: auto;
-  padding-bottom: 10%;
-  background: rgb(226,206,206);
-background: linear-gradient(0deg, rgba(226,206,206,1) 0%, rgba(208,192,192,1) 100%);
+  background-color: #ddd2d2;
+  position: relative;
 }
 
 .sobre .sobre-wrapper {
@@ -55,12 +57,11 @@ background: linear-gradient(0deg, rgba(226,206,206,1) 0%, rgba(208,192,192,1) 10
   display: flex;
   justify-content: space-evenly;
   margin: auto;
-  
 }
 
 .sobre .sobre-texto {
   width: 35%;
-  height: auto;  
+  height: auto;
 }
 
 .sobre .sobre-texto h3 {
@@ -68,18 +69,94 @@ background: linear-gradient(0deg, rgba(226,206,206,1) 0%, rgba(208,192,192,1) 10
   font-family: "Playfair Display", serif;
   font-size: 3rem;
   text-shadow: 1px 3px 5px #c1a2a2;
-  margin-bottom:8%;
+  margin-bottom: 8%;
 }
 
-.sobre .sobre-texto p{
+.sobre .sobre-texto p {
   color: rgb(133, 121, 121);
   font-weight: 300;
 }
 
-.sobre .AnaDellamatrizFoto{
+.sobre .AnaDellamatrizFoto {
   width: 100%;
-  margin-top:5%;
- 
+  margin-top: 5%;
+}
+
+.especialidades .wave3 {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.sobre .sobreWaveFim {
+  position: absolute;
+  top: 100%;
+}
+
+.sobre .agende-seu-horario-wrapper {
+  background-color: #e8e5e5;
+  width: 70%;
+  height: 30%;
+  padding: 8%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px rgba(125, 125, 125, 0.534);
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 110%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 700px;
+  gap: 40px;
+}
+
+.sobre .agende-seu-horario-wrapper p {
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-shadow: 1px 1px 5px #908e8e;
+}
+
+.sobre .agende-seu-horario-wrapper h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  text-shadow: 1px 3px 5px #c0bbbb;
+  color: rgb(166, 146, 146);
+}
+
+.footer {
+  background-color: #fafafac1;
+  width: 100vw;
+  height: 20vh;
+  background-image: url(../../images/Letraslogo.png),
+    linear-gradient(180deg, rgb(244, 244, 244) 0%, rgb(125, 124, 124) 100%);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.logo {
+  width: 50%;
+  max-width: 500px;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top:20px;
+}
+
+.footer-wrapper p {
+  font-size: 0.8rem;
+}
+
+.footer-wrapper h5 {
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1395px) {
@@ -94,14 +171,14 @@ background: linear-gradient(0deg, rgba(226,206,206,1) 0%, rgba(208,192,192,1) 10
     margin: 10% 10% 10%;
   }
 
-  .sobre .sobre-wrapper{
+  .sobre .sobre-wrapper {
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
   }
 
-  .sobre .sobre-texto{
+  .sobre .sobre-texto {
     width: 80%;
-    margin-bottom:5%;
+    margin-bottom: 5%;
   }
 }
 
@@ -109,16 +186,28 @@ background: linear-gradient(0deg, rgba(226,206,206,1) 0%, rgba(208,192,192,1) 10
   .main-text {
     font-size: 1.9rem;
   }
+  .sobre .agende-seu-horario-wrapper {
+    top: 105%;
+  }
 }
 
 @media screen and (max-width: 400px) {
   .main-text {
     font-size: 1.5rem;
   }
+  .sobre .agende-seu-horario-wrapper {
+    top: 103%;
+  }
 }
 
 @media screen and (max-width: 280px) {
   .main-text {
+    font-size: 1rem;
+  }
+  .sobre .agende-seu-horario-wrapper {
+    top: 102%;
+  }
+  .especialidades h2 {
     font-size: 1rem;
   }
 }

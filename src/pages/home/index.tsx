@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import "./Home.css";
 import background from "../../images/background.png";
 import Header from "../../components/Header";
@@ -6,14 +6,13 @@ import SaibaMais from "../../components/Saiba-mais";
 import SwiperContent from "../../components/Swiper";
 import React, { useRef } from "react";
 import AnaDellamatrizFoto from "../../images/anadellamatriz.png";
+import Logo from "../../images/Logo.png";
 
 const Home = () => {
   const especialidades = useRef<HTMLDivElement>(null);
   const sobreMim = useRef<HTMLDivElement>(null);
 
-  const scrollTo = (
-    elementref: React.RefObject<HTMLDivElement>
-  ) => {
+  const scrollTo = (elementref: React.RefObject<HTMLDivElement>) => {
     if (elementref?.current) {
       window.scrollTo({
         top: elementref.current.offsetTop,
@@ -56,12 +55,21 @@ const Home = () => {
           ></path>
         </svg>
       </Box>
+
       <Box className="especialidades" ref={especialidades}>
         <h2>Especialidades</h2>
         <SwiperContent />
-      </Box> 
+      </Box>
+
       <Box className="sobre" ref={sobreMim}>
-        <div className='sobre-wrapper'>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#D0C0C0"
+            fill-opacity="1"
+            d="M0,224L48,202.7C96,181,192,139,288,122.7C384,107,480,117,576,138.7C672,160,768,192,864,202.7C960,213,1056,203,1152,186.7C1248,171,1344,149,1392,138.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+          ></path>
+        </svg>
+        <div className="sobre-wrapper">
           <div className="sobre-texto">
             <h3>Sobre</h3>
             <p>
@@ -76,6 +84,64 @@ const Home = () => {
           </div>
           <div>
             <img className="AnaDellamatrizFoto" src={AnaDellamatrizFoto} />
+          </div>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          className="sobreWaveFim"
+        >
+          <path
+            fill="#DDD2D2"
+            fill-opacity="1"
+            d="M0,192L48,202.7C96,213,192,235,288,229.3C384,224,480,192,576,176C672,160,768,160,864,181.3C960,203,1056,245,1152,250.7C1248,256,1344,224,1392,208L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+          ></path>
+        </svg>
+        <div className="agende-seu-horario-wrapper">
+          <div>
+            <p>QUER SABER MAIS?</p>
+            <h4>agende seu horário</h4>
+          </div>
+          <Button
+            sx={{
+              fontFamily: "Work Sans",
+              color: "white",
+              backgroundColor: "#866A70",
+              fontSize: "10px",
+              borderRadius: "20px",
+              padding: "5px 17px 5px 10px",
+              transition: "0.2s, ease-in-out",
+              fontWeight: "700",
+              textAlign: "center",
+              cursor: "pointer",
+              width: "150px",
+              margin: " auto",
+
+              "&:hover": {
+                backgroundColor: "#a97683",
+              },
+            }}
+          >
+            Clique aqui
+          </Button>
+        </div>
+      </Box>
+      <Box sx={{ width: "100vw", height: "50vh", minHeight: "500px" }}></Box>
+
+      <Box className="footer">
+        <div className="footer-wrapper">
+          <img src={Logo} className="logo" />
+          <div className="footer-localização">
+            <h5>LOCALIZAÇÃO</h5>
+            <p>
+              R. Edvard Carmilo, 926 - Jardim Celeste, São Paulo - SP, 05528-001
+            </p>
+          </div>
+          <div className="footer-contato">
+            <h5>CONTATO</h5>
+            <p>Telefone: (--)0000-0000</p>
+              <p> Email: ana_dellaamtriz@hotmail.com</p>
+             <p>Whatsapp:(00)00000-0000</p>
           </div>
         </div>
       </Box>
