@@ -3,17 +3,28 @@ import { Box } from "@mui/system";
 import image from "../../images/Logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import ModalHeader from "../Modal-header";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import { Button } from "@mui/material";
 
-const Header = ({sobreMimScroll}:{sobreMimScroll:() => void}) => {
+const Header = ({ sobreMimScroll }: { sobreMimScroll: () => void }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [header, setHeader] = useState(false);
+ 
+  const changeBackground =() => {
+    if (window.scrollY >= 80) {
+      setHeader(true);
+    }else{
+      setHeader(false);
+    }
+  }
+
+  window.addEventListener('scroll', changeBackground)
 
   return (
-    <Box className="header">
+    <Box className={header ? 'header active' : 'header'}>
       <div className="menu-logo-bar">
         <img className="logo" src={image} />
         <ModalHeader open={open} onClose={handleClose} />
@@ -24,25 +35,27 @@ const Header = ({sobreMimScroll}:{sobreMimScroll:() => void}) => {
             color: "white",
             width: "18%",
             height: "35px",
-            padding:'5px',
+            padding: "5px",
             display: { xs: "block", md: "none" },
-            cursor:'pointer',
-            borderRadius:'50%',
-            '&:hover':{
-              backgroundColor:'#AB9F9F'              
-            }
+            cursor: "pointer",
+            borderRadius: "50%",
+            "&:hover": {
+              backgroundColor: "#AB9F9F",
+            },
           }}
         />
-      </div>
+      </div>      
       <ul className="ancors">
         <li>
-          <a className='items' onClick={sobreMimScroll}>Sobre mim</a>
+          <a className="items" onClick={sobreMimScroll}>
+            Sobre mim
+          </a>
         </li>
         <li>
-          <a className='items'>Serviços</a>
+          <a className="items">Serviços</a>
         </li>
         <li>
-          <a className='items'>Localização</a>
+          <a className="items">Localização</a>
         </li>
         <li>
           <Button
@@ -54,10 +67,10 @@ const Header = ({sobreMimScroll}:{sobreMimScroll:() => void}) => {
               fontSize: "15px",
               borderRadius: "20px",
               padding: "3px 12px",
-              transition: '2s, ease-in-out',
-              '&:hover':{
-                backgroundColor:'#a97683'
-              }
+              transition: "2s, ease-in-out",
+              "&:hover": {
+                backgroundColor: "#a97683",
+              },
             }}
           >
             {" "}

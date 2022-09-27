@@ -131,6 +131,7 @@ const Home = () => {
       <Box className="footer">
         <div className="footer-wrapper">
           <img src={Logo} className="logo" />
+          <div className='footer-texto'>
           <div className="footer-localização">
             <h5>LOCALIZAÇÃO</h5>
             <p>
@@ -142,6 +143,7 @@ const Home = () => {
             <p>Telefone: (--)0000-0000</p>
               <p> Email: ana_dellaamtriz@hotmail.com</p>
              <p>Whatsapp:(00)00000-0000</p>
+          </div>
           </div>
         </div>
       </Box>
