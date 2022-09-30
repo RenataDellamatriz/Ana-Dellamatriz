@@ -6,25 +6,32 @@ import ModalHeader from "../Modal-header";
 import { useEffect, useState } from "react";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
-const Header = ({ sobreMimScroll }: { sobreMimScroll: () => void }) => {
+const Header = ({ sobreMimScroll }: { sobreMimScroll?: () => void }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const [header, setHeader] = useState(false);
- 
-  const changeBackground =() => {
+
+  const navigate = useNavigate();
+
+  const navigateToContact = () => {
+    navigate("/contato");
+  };
+
+  const changeBackground = () => {
     if (window.scrollY >= 80) {
       setHeader(true);
-    }else{
+    } else {
       setHeader(false);
     }
-  }
+  };
 
-  window.addEventListener('scroll', changeBackground)
+  window.addEventListener("scroll", changeBackground);
 
   return (
-    <Box className={header ? 'header active' : 'header'}>
+    <Box className={header ? "header active" : "header"}>
       <div className="menu-logo-bar">
         <img className="logo" src={image} />
         <ModalHeader open={open} onClose={handleClose} />
@@ -44,7 +51,7 @@ const Header = ({ sobreMimScroll }: { sobreMimScroll: () => void }) => {
             },
           }}
         />
-      </div>      
+      </div>
       <ul className="ancors">
         <li>
           <a className="items" onClick={sobreMimScroll}>
@@ -59,6 +66,7 @@ const Header = ({ sobreMimScroll }: { sobreMimScroll: () => void }) => {
         </li>
         <li>
           <Button
+            onClick={navigateToContact}
             startIcon={<EventAvailableIcon />}
             sx={{
               fontFamily: "Work Sans",

@@ -1,0 +1,120 @@
+.header-contato h1 {
+  margin-top: 10%;
+  padding-left: 15%;
+  margin-bottom: 8%;
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  text-shadow: 1px 2px 5px #948d8d;
+  position: absolute;
+}
+
+.card-background {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(226, 206, 206, 1) 100%
+  );
+  width: 100vw;
+  height: auto;
+  position: relative;
+  
+}
+
+.card-wrapper {
+  padding-bottom: 30px;
+ 
+  width: 80vw;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: -15%;
+  gap: 5px;
+}
+
+.card {
+  background-color: azure;
+  width: 20vw;
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 220px;
+  gap: 10px;
+  box-shadow: 1px 1px 10px rgba(115, 91, 91, 0.608);
+}
+
+.card img {
+  width: 15%;
+}
+
+.card h4 {
+  font-family: "Playfair Display", serif;
+  color: #be9e9e;
+}
+
+.card p {
+  font-family: "Playfair Display", serif;
+  color: #be9e9e;
+  font-size: 0.7rem;
+}
+
+.entre-em-contato {
+  width: 100vw;
+  height: 90vh;
+  background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(226,206,206,1) 100%);
+}
+
+.entre-em-contato h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  text-shadow: 1px 3px 5px #c0bbbb;
+  color: rgb(166, 146, 146);
+  padding-left: 15%;
+}
+
+.input-wrapper{  
+  width:50%;
+  height:auto;
+  padding:40px;
+  margin-top: 3%;
+  margin-left: 10%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 10px rgba(115, 91, 91, 0.608);
+  border-radius: 8px;
+  
+}
+.input{  
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .card-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 60%;
+  }
+  .header-contato h1 {
+    margin-top: 20%;
+    margin-left: 15%;
+  }
+  .card-background{
+    height: 60vh;
+  }
+}

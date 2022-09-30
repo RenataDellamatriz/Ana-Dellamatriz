@@ -1,0 +1,61 @@
+.footer {
+    background-color: #fafafa69;
+    width: 100vw;
+    height: 20vh;
+    background-image: url(../../images/Letraslogo.png),
+      linear-gradient(180deg, rgb(244, 244, 244) 0%, rgb(125, 124, 124) 100%);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .logo {
+    width: 50%;
+    max-width: 500px;
+  }
+  
+  .footer-wrapper {
+    display: flex;  
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top:20px;
+    gap: 40px;
+  }
+  
+  .footer-texto{
+    display: flex;  
+    gap:80px;  
+  }
+  
+  .footer-wrapper p {
+    font-size: 0.7rem;  
+  }
+  
+  .footer-wrapper h5 {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  @media screen and (max-width: 768px) {
+    .footer-wrapper{    
+        display: flex;
+        flex-direction: column; 
+         padding-bottom: 30px;  
+      }
+       
+      
+      .footer-texto{    
+        flex-direction: column;
+        width:250px;
+        margin:auto;
+        text-align: center;
+        gap:30px;
+       
+    
+      }
+    
+      .footer{
+        height:auto;
+        
+        background:linear-gradient(180deg, rgb(212, 212, 212) 0%, rgb(125, 124, 124) 100%); ;
+      }
+  }

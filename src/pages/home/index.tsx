@@ -6,12 +6,14 @@ import SaibaMais from "../../components/Saiba-mais";
 import SwiperContent from "../../components/Swiper";
 import React, { useRef } from "react";
 import AnaDellamatrizFoto from "../../images/anadellamatriz.png";
-import Logo from "../../images/Logo.png";
+import Footer from "../../components/Footer";
+
 
 const Home = () => {
   const especialidades = useRef<HTMLDivElement>(null);
   const sobreMim = useRef<HTMLDivElement>(null);
 
+//scrollar até algum ponto da página
   const scrollTo = (elementref: React.RefObject<HTMLDivElement>) => {
     if (elementref?.current) {
       window.scrollTo({
@@ -128,25 +130,7 @@ const Home = () => {
       </Box>
       <Box sx={{ width: "100vw", height: "50vh", minHeight: "500px" }}></Box>
 
-      <Box className="footer">
-        <div className="footer-wrapper">
-          <img src={Logo} className="logo" />
-          <div className='footer-texto'>
-          <div className="footer-localização">
-            <h5>LOCALIZAÇÃO</h5>
-            <p>
-              R. Edvard Carmilo, 926 - Jardim Celeste, São Paulo - SP, 05528-001
-            </p>
-          </div>
-          <div className="footer-contato">
-            <h5>CONTATO</h5>
-            <p>Telefone: (--)0000-0000</p>
-              <p> Email: ana_dellaamtriz@hotmail.com</p>
-             <p>Whatsapp:(00)00000-0000</p>
-          </div>
-          </div>
-        </div>
-      </Box>
+    <Footer/>
     </>
   );
 };
