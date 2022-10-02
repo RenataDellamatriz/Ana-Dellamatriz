@@ -16,8 +16,16 @@ const Header = ({ sobreMimScroll }: { sobreMimScroll?: () => void }) => {
 
   const navigate = useNavigate();
 
+  const navigateToHome = () => {
+    navigate("/");
+  };
+
   const navigateToContact = () => {
     navigate("/contato");
+  };
+
+  const navigateToLocal = () => {
+    navigate("/local");
   };
 
   const changeBackground = () => {
@@ -62,7 +70,7 @@ const Header = ({ sobreMimScroll }: { sobreMimScroll?: () => void }) => {
           <a className="items">Serviços</a>
         </li>
         <li>
-          <a className="items">Localização</a>
+          <a className="items" onClick={navigateToLocal}>Localização</a>
         </li>
         <li>
           <Button
