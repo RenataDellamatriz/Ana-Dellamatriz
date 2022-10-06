@@ -41,7 +41,7 @@ const Header = ({ sobreMimScroll }: { sobreMimScroll?: () => void }) => {
   return (
     <Box className={header ? "header active" : "header"}>
       <div className="menu-logo-bar">
-        <img className="logo" src={image} />
+        <img onClick={navigateToHome} className="logo" src={image} />
         <ModalHeader open={open} onClose={handleClose} />
         <MenuIcon
           onClick={handleOpen}

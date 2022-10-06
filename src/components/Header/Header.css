@@ -24,6 +24,7 @@
 .header .logo {
   width: 350px;
   padding-top: 20px;
+  cursor: pointer;
 }
 
 .header div {

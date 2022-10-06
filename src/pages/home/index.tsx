@@ -29,7 +29,7 @@ const Home = () => {
         sx={{
           backgroundImage: `url(${background})`,
           width: "100vw",
-          height: "100vh",
+          height: "130vh",
           backgroundSize: "cover",
           backgroundAttachment: "local",
           backgroundRepeat: "no-repeat",

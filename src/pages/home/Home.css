@@ -1,11 +1,9 @@
 .main-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-evenly;  
   text-align: center;
-  margin: auto;
-  gap: 50px;
+  margin: auto;    
   width: 70%;
   height: 70%;
 }
@@ -34,9 +32,10 @@
     rgba(208, 192, 192, 1) 100%
   );
   width: 100vw;
-  height: auto;
+  height: 80vh;
   position: relative;
   text-shadow: 1px 3px 5px #c1a2a2;
+  margin: auto;
 }
 
 .especialidades h2 {
