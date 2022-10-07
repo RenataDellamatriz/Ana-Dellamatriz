@@ -8,7 +8,7 @@ import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-const Header = ({ sobreMimScroll }: { sobreMimScroll?: () => void }) => {
+const Header = ({ sobreMimAction }: { sobreMimAction: () => void }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -17,7 +17,7 @@ const Header = ({ sobreMimScroll }: { sobreMimScroll?: () => void }) => {
   const navigate = useNavigate();
 
   const navigateToHome = () => {
-    navigate("/");
+    navigate("/?scroll=sobremim");
   };
 
   const navigateToContact = () => {
@@ -41,7 +41,7 @@ const Header = ({ sobreMimScroll }: { sobreMimScroll?: () => void }) => {
   return (
     <Box className={header ? "header active" : "header"}>
       <div className="menu-logo-bar">
-        <img onClick={navigateToHome} className="logo" src={image} />
+        <img onClick={() => navigate("/")} className="logo" src={image} />
         <ModalHeader open={open} onClose={handleClose} />
         <MenuIcon
           onClick={handleOpen}
@@ -62,7 +62,7 @@ const Header = ({ sobreMimScroll }: { sobreMimScroll?: () => void }) => {
       </div>
       <ul className="ancors">
         <li>
-          <a className="items" onClick={sobreMimScroll}>
+          <a className="items" onClick={sobreMimAction}>
             Sobre mim
           </a>
         </li>
@@ -70,7 +70,9 @@ const Header = ({ sobreMimScroll }: { sobreMimScroll?: () => void }) => {
           <a className="items">Serviços</a>
         </li>
         <li>
-          <a className="items" onClick={navigateToLocal}>Localização</a>
+          <a className="items" onClick={navigateToLocal}>
+            Localização
+          </a>
         </li>
         <li>
           <Button
@@ -80,7 +82,7 @@ const Header = ({ sobreMimScroll }: { sobreMimScroll?: () => void }) => {
               fontFamily: "Work Sans",
               color: "white",
               backgroundColor: "#866A70",
-              fontSize: "15px",
+              fontSize: "12px",
               borderRadius: "20px",
               padding: "3px 12px",
               transition: "2s, ease-in-out",

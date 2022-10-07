@@ -32,13 +32,16 @@
     rgba(208, 192, 192, 1) 100%
   );
   width: 100vw;
-  height: 80vh;
+  height: auto;
   position: relative;
   text-shadow: 1px 3px 5px #c1a2a2;
   margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
-.especialidades h2 {
+.especialidades h2 { 
   color: #be9e9e;
   font-family: "Playfair Display", serif;
   font-size: 3rem;
@@ -52,7 +55,7 @@
   position: relative;
 }
 
-.sobre .sobre-wrapper {
+.sobre .sobre-wrapper {  
   width: 80%;
   display: flex;
   justify-content: space-evenly;
@@ -136,6 +139,12 @@
   .main-text {
     font-size: 2.5rem;
   }
+  .sobre .sobre-texto h3{
+    padding-top:50px;
+  }
+  .sobre .AnaDellamatrizFoto{
+    padding-top:50px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -161,6 +170,10 @@
   }
   .sobre .agende-seu-horario-wrapper {
     top: 105%;
+  }
+
+  .especialidades h2 {
+    padding-top: 50px;
   }
   .footer-wrapper{    
     display: flex;

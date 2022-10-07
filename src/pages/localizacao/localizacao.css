@@ -1,12 +1,12 @@
-.main-content-localizacao h3{
-    font-family: "Playfair Display", serif;
+h3{
+  font-family: "Playfair Display", serif;
   font-size: 2.5rem;
   text-shadow: 1px 3px 5px #c0bbbb;
   color: rgb(166, 146, 146);
 }
 
-.localizacao-wrapper{
-    width: 60%;
-    height:40%;
-    background-color: aquamarine;
+.localizacao-wrapper {
+  width: 60%;
+  height: 40%;
+  background-color: aquamarine;
 }

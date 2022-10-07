@@ -7,8 +7,10 @@ import cardWhatsapp from "../../images/card-whatsapp.png";
 import "./Contato.css";
 import Footer from "../../components/Footer";
 import MuiTextField from "../../components/MuiTextField";
+import { useNavigate } from "react-router-dom";
 
 const Contato = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Box
@@ -25,7 +27,7 @@ const Contato = () => {
           minHeight: "500px",
         }}
       >
-        <Header />
+        <Header sobreMimAction={() => navigate("/?scroll=sobreMim")} />
         <h1>Agende seu horário</h1>
       </Box>
 
@@ -83,7 +85,7 @@ const Contato = () => {
             </div>
           </div>
           <div className="horario-de-atendimento-wrapper">
-                <h5>Horário de atendimento</h5>
+            <h5>Horário de atendimento</h5>
             <div className="dias-e-horario-wrapper">
               <ul className="dias-de-atendimento">
                 <Typography
@@ -91,7 +93,7 @@ const Contato = () => {
                     fontFamily: "Work sans",
                     fontWeight: "700",
                     color: "#9d9d9d",
-                    fontSize:'0.8rem'
+                    fontSize: "0.8rem",
                   }}
                   className="dias-de-atendimento-letra"
                 >
@@ -102,7 +104,7 @@ const Contato = () => {
                     fontFamily: "Work sans",
                     fontWeight: "700",
                     color: "#9d9d9d",
-                    fontSize:'0.8rem'
+                    fontSize: "0.8rem",
                   }}
                   className="dias-de-atendimento-letra"
                 >
@@ -113,7 +115,7 @@ const Contato = () => {
                     fontFamily: "Work sans",
                     fontWeight: "700",
                     color: "#9d9d9d",
-                    fontSize:'0.8rem'
+                    fontSize: "0.8rem",
                   }}
                   className="dias-de-atendimento-letra"
                 >
@@ -124,7 +126,7 @@ const Contato = () => {
                     fontFamily: "Work sans",
                     fontWeight: "700",
                     color: "#9d9d9d",
-                    fontSize:'0.8rem'
+                    fontSize: "0.8rem",
                   }}
                   className="dias-de-atendimento-letra"
                 >
@@ -135,7 +137,7 @@ const Contato = () => {
                     fontFamily: "Work sans",
                     fontWeight: "700",
                     color: "#9d9d9d",
-                    fontSize:'0.8rem'
+                    fontSize: "0.8rem",
                   }}
                   className="dias-de-atendimento-letra"
                 >
