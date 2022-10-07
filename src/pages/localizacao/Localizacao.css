@@ -1,0 +1,14 @@
+.titulo{
+  color: #be9e9e;
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.localizacao-wrapper {
+  width: 60vw;
+  height: 50vh;
+  background-color: #f0eaea;
+  margin: auto;
+  
+}

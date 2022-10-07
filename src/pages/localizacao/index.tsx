@@ -1,6 +1,8 @@
 import { Box } from "@mui/material";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import Maps from "../../components/Mapa";
+import './Localizacao.css'
 
 const Localizacao = () => {
   return (
@@ -9,8 +11,8 @@ const Localizacao = () => {
         sx={{
           width: "100vw",
           height: "auto",
-          background:
-            "linear-gradient(0deg, rgba(207,207,207,1) 0%, rgba(101,97,97,1) 100%)",
+          backgroundColor:'#9C8187',
+          
         }}
       >
         <Header sobreMimAction={() => {}} />
@@ -20,13 +22,15 @@ const Localizacao = () => {
         sx={{          
           margin: "0",
           width: "100vw",
-          height: "70vh",
-          background:
-            "linear-gradient(0deg, rgba(207,207,207,1) 0%, rgba(101,97,97,1) 100%)",
+          height: "66vh",
+          backgroundSize: 'cover',
+          backgroundColor: '#ddd2d2'            
         }}
       >
-        <h3 className='localizacao-titulo'>Localização</h3>
-        <div className="localizacao-wrapper"></div>
+        <h3 className='titulo'>Localização</h3>
+        <div className="localizacao-wrapper">
+          <Maps/>
+        </div>
       </Box>
 
       <Footer />
