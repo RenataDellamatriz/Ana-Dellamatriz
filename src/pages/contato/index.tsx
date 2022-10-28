@@ -56,10 +56,10 @@ const Contato = () => {
         <div className="entre-em-contato-wrapper">
           <div className="input-wrapper">
             <div className="input">
-              <MuiTextField label="Nome" />
-              <MuiTextField label="Email" />
-              <MuiTextField label="Assunto" />
-              <MuiTextField label="Mensagem" />
+              <MuiTextField label="Nome" name='name' />
+              <MuiTextField label="Email" name='email' />
+              <MuiTextField label="Assunto" name='subject' />
+              <MuiTextField label="Mensagem" name='message'/>
               <Button
                 sx={{
                   fontFamily: "Work Sans",

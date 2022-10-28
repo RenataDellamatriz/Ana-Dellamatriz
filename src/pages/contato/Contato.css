@@ -1,10 +1,12 @@
 .header-contato h1 {
   margin-top: 10%;
+  color:#fff;
   padding-left: 15%;
   margin-bottom: 8%;
+  font-weight: 500;
   font-size: 3rem;
   font-family: "Playfair Display", serif;
-  text-shadow: 1px 2px 5px #948d8d;
+  text-shadow: 1px 1px 2px #807e7e;
   position: absolute;
 }
 

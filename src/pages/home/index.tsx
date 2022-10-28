@@ -8,8 +8,15 @@ import React, { useEffect, useRef } from "react";
 import AnaDellamatrizFoto from "../../images/anadellamatriz.png";
 import Footer from "../../components/Footer";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate(); 
+
+  const navigateToContact = () => {
+    navigate("/contato");
+  };
+  
   const especialidades = useRef(null);
   const sobreMim = useRef(null);
   // hook do react-router-dom(lib) para procurar coisas na URL
@@ -121,6 +128,7 @@ const Home = () => {
             <h4>agende seu horário</h4>
           </div>
           <Button
+            onClick={navigateToContact}
             sx={{
               fontFamily: "Work Sans",
               color: "white",
@@ -144,7 +152,7 @@ const Home = () => {
           </Button>
         </div>
       </Box>
-      <Box sx={{ width: "100vw", height: "50vh", minHeight: "500px" }}></Box>
+      <Box sx={{ width: "100vw", height: "50vh", minHeight: "500px", backgroundColor:'#FFF' }}></Box>
 
       <Footer />
     </>

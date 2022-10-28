@@ -11,11 +11,12 @@ import './MuiTextField.css'
 //     }
 // })
 
-const MuiTextField = ({ label}: { label: string }) => {
+const MuiTextField = ({ label, name }: { label : string ; name : string}) => {
 
 //ThemeProvider ta deixando minha página em branco, arruma isso ae
   return(//  
   <TextField 
+  name={name}
   label={label}   
   variant='outlined'  
   />    

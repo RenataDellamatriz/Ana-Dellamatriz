@@ -30,7 +30,7 @@ const SwiperContent = () => {
     <>
       <Swiper
         slidesPerView={slidesAmount}
-        spaceBetween={30}
+        spaceBetween={50}
         slidesPerGroup={3}
         loop={true}
         loopFillGroupWithBlank={true}
